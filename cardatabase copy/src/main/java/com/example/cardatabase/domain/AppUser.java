@@ -3,12 +3,14 @@ package com.example.cardatabase.domain;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
 @Entity
 @NoArgsConstructor(force = true)
 @Getter
 @Setter
+@RequiredArgsConstructor
 public class AppUser {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
