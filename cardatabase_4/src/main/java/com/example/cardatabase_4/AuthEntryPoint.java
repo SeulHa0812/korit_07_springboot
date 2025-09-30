@@ -1,4 +1,4 @@
-package com.example.cardatabase;
+package com.example.cardatabase_4;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -18,6 +18,7 @@ public class AuthEntryPoint implements AuthenticationEntryPoint {
         response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
         response.setContentType(MediaType.APPLICATION_JSON_VALUE);
         PrintWriter writer = response.getWriter();
-        writer.println("Error : wrong id or password" + authException.getMessage());
+        writer.println("Error : " + authException.getMessage());
+
     }
 }
